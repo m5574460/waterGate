@@ -21,6 +21,7 @@ for cnt in cnts:
 M = cv2.moments(largestCnt)
 x = int(M["m10"] / M["m00"])
 y = int(M["m01"] / M["m00"])
+cv2.circle(img, (x, y), 10, (1, 227, 254), -1)
 
 # Initiale mask for flood filling
 width, height = temp.shape

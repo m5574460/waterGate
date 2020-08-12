@@ -3,7 +3,7 @@ import numpy as np
 import os
 import copy
 
-image = cv2.imread('D:/waterGate/image/7.jpg')
+image = cv2.imread('D:/waterGate/image/8.jpg')
 clone = image.copy()
 #cv2.imshow("clone", clone)
 
@@ -17,8 +17,7 @@ ret, binary = cv2.threshold(binaryIMG.copy(), 127, 255, cv2.THRESH_BINARY)
 
 cv2.drawContours(clone, cnts, -1, (0, 255, 0), 2)
 
-
-cnt = cnts[600]
+cnt = cnts[5]
 print(len(cnts))
 imgnew = cv2.drawContours(clone, cnt, -1, (0,255,0), 3)
 
